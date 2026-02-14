@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           
           <h3 className="font-serif text-3xl text-rose-deep mb-4">
-            Happy Rose Day
+            Happy Rose-Mary Day, My Love!🌹
           </h3>
           
           <p className="text-muted-foreground mb-8 max-w-md mx-auto">
@@ -41,7 +41,7 @@ const Footer = () => {
           </p>
           
           {/* Social share hint */}
-          <div className="flex justify-center gap-3 sm:gap-4 mb-8">
+          {/* <div className="flex justify-center gap-3 sm:gap-4 mb-8">
             <button 
               className="p-3 sm:p-4 rounded-full bg-rose-soft/50 hover:bg-rose-soft transition-colors group touch-manipulation min-h-[44px] min-w-[44px]"
               data-interactive
@@ -70,16 +70,16 @@ const Footer = () => {
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" fill="none" stroke="hsl(36, 100%, 97%)" strokeWidth="2" />
               </svg>
             </button>
-          </div>
+          </div> */}
           
           {/* Valentine's week */}
           <div className="glass rounded-2xl p-4 sm:p-6 max-w-md mx-auto mb-10">
-            <h4 className="font-serif text-base sm:text-lg text-foreground mb-4">Valentine's Week 2026 💕</h4>
+            <h4 className="font-serif text-base sm:text-lg text-foreground mb-4">Valentine's Day 2026 💕</h4>
 
           </div>
           
           <p className="text-sm text-muted-foreground">
-            Made with 💕 and 🌹 • Rose Day 2026
+            Made with 💕 and 🌹 • Daniel Anya 
           </p>
         </motion.div>
       </div>

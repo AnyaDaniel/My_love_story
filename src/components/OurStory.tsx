@@ -9,7 +9,9 @@ interface Chapter {
   content: string;
   emoji: string;
   image?: string;
+  video?: string;
   badge?: string;
+  
 }
 
 const OurStory = () => {
@@ -27,6 +29,7 @@ const OurStory = () => {
       badge: '❤️',
       content: 'From the moment our eyes met, I knew there was something extraordinary about you. Time seemed to stand still, and in that instant, everything changed.',
       emoji: '💕',
+      video: '/images/E9B18549-31F1-4C49-A660-D739FB34BC4B.mp4',
     },
     {
       id: 2,
@@ -35,14 +38,16 @@ const OurStory = () => {
       badge: '💝',
       content: 'Every conversation drew me closer. Your laugh became my favorite sound, your smile my favorite sight. I found myself thinking of you at every moment.',
       emoji: '💖',
+      image: '/images/IMG_3059.jpeg',
     },
     {
       id: 3,
       number: 'Chapter 3 of 3',
       title: 'Forever Starts Now',
       badge: '💍',
-      content: 'This is not the end, but the beginning of our greatest adventure. With you, I have found my home, my peace, my everything.',
+      content: 'Hopefully, this tale doesn\'t end here, but marks the beginning of our greatest adventure. With you, I have found my home, my peace, my everything.',
       emoji: '💫',
+      image: '/images/IMG_3026.jpeg',
     },
   ];
 
@@ -186,23 +191,39 @@ const OurStory = () => {
                   className={`${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}
                 >
                   <div className="relative">
-                    {/* Frame with photo placeholder */}
+                    {/* Frame with photo/video placeholder */}
                     <div className="glass rounded-3xl p-4 sm:p-6 shadow-2xl">
                       <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-rose-soft to-rose-blush flex items-center justify-center">
-                        {/* You can replace this with actual images */}
-                        <motion.div
-                          animate={{
-                            scale: [1, 1.1, 1],
-                            rotate: [0, 5, -5, 0],
-                          }}
-                          transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                          }}
-                          className="text-8xl sm:text-9xl"
-                        >
-                          {chapter.emoji}
-                        </motion.div>
+                        {chapter.video ? (
+                          <video
+                            src={chapter.video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover"
+                          />
+                        ) : chapter.image ? (
+                          <img
+                            src={chapter.image}
+                            alt={chapter.title}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <motion.div
+                            animate={{
+                              scale: [1, 1.1, 1],
+                              rotate: [0, 5, -5, 0],
+                            }}
+                            transition={{
+                              duration: 4,
+                              repeat: Infinity,
+                            }}
+                            className="text-8xl sm:text-9xl"
+                          >
+                            {chapter.emoji}
+                          </motion.div>
+                        )}
                       </div>
                     </div>
 

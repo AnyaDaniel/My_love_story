@@ -13,6 +13,7 @@ import LoveLetter from '@/components/LoveLetter';
 import Footer from '@/components/Footer';
 import SplashScreen from '@/components/SplashScreen';
 import BackgroundMusic from '@/components/BackgroundMusic';
+import { MusicProvider } from '@/contexts/MusicContext';
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
@@ -24,6 +25,7 @@ const Index = () => {
       
       {/* Main Content */}
       {showContent && (
+        <MusicProvider>
         <div className="min-h-screen bg-background cursor-none overflow-x-hidden scroll-smooth">
           {/* Custom Rose Cursor */}
           <RoseCursor />
@@ -62,6 +64,7 @@ const Index = () => {
             <Footer />
           </main>
         </div>
+        </MusicProvider>
       )}
     </>
   );

@@ -17,45 +17,45 @@ const MemoryGallery = () => {
   const memories: Memory[] = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&h=600&fit=crop',
-      title: 'First Date',
-      date: 'January 14, 2024',
+      image: '/images/IMG_3026.jpeg',
+      title: 'Nike Art & Gallery Visit',
+      date: 'February 5, 2026',
       description: 'The day everything changed 💕'
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&h=600&fit=crop',
-      title: 'Beach Sunset',
-      date: 'March 20, 2024',
-      description: 'Watching the sunset together 🌅'
+      image: '/images/IMG_3058.jpeg',
+      title: 'Our First Date',
+      date: 'November 21, 2025',
+      description: 'not the real picture, but a Movie afternoon and the start of something beautiful 🎬'
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1464047736614-af63643285bf?w=800&h=600&fit=crop',
-      title: 'Mountain Adventure',
-      date: 'May 10, 2024',
-      description: 'Reaching new heights together ⛰️'
+      image: '/images/IMG_2717.jpeg',
+      title: 'Sunday at Church',
+      date: 'February 1st, 2026',
+      description: 'Your radiant smile that blessed my day 🙏'
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop',
-      title: 'Cozy Dinner',
-      date: 'July 7, 2024',
-      description: 'Candlelit dinner for two 🕯️'
+      image: '/images/IMG_2892.jpeg',
+      title: 'Call to Bar Celebration',
+      date: 'November 25, 2025',
+      description: 'So proud of my Boss Baby Lawyer 👨‍⚖️'
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=600&fit=crop',
-      title: 'Stargazing Night',
-      date: 'August 15, 2024',
-      description: 'Under the stars, holding hands ✨'
+      image: '/images/IMG_3061.jpeg',
+      title: 'Our First Christmas',
+      date: 'December 25, 2025',
+      description: 'Wrapped in the magic of you and I 🎄✨'
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=600&fit=crop',
-      title: 'Concert Night',
-      date: 'September 22, 2024',
-      description: 'Dancing to our favorite songs 🎶'
+      image: '/images/IMG_3069.jpeg',
+      title: 'Valentine\'s Day 2026',
+      date: 'February 14, 2026',
+      description: 'Celebrating our love story 💌'
     }
   ];
 
@@ -139,7 +139,7 @@ const MemoryGallery = () => {
           className="text-center mt-12"
         >
           <button className="px-6 sm:px-8 py-3 sm:py-4 bg-rose-deep text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:bg-rose-deep/90 transition-all duration-300 text-sm sm:text-base touch-manipulation min-h-[44px]">
-            Add More Memories 💕
+            Hope to Create More Memories with You 💕
           </button>
         </motion.div>
       </div>

@@ -84,7 +84,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               transition={{ delay: 0.8 }}
               className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-rose-deep mb-4"
             >
-              Happy Rose Day
+              Happy Rose-M Day
             </motion.h1>
 
             <motion.p

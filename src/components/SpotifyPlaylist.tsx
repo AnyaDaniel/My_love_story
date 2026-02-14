@@ -4,13 +4,15 @@ import { Music, Play } from 'lucide-react';
 const SpotifyPlaylist = () => {
   // Replace this with your actual Spotify playlist embed URL
   // Get it from: Spotify > Your Playlist > Share > Embed Playlist
-  const spotifyEmbedUrl = "https://open.spotify.com/embed/playlist/37i9dQZF1DX7KNKjOK0o75?utm_source=generator";
+  const spotifyEmbedUrl = "https://open.spotify.com/embed/playlist/1mD1oIburGsf6h68bix5fu";
 
   const songSuggestions = [
     { title: "Perfect", artist: "Ed Sheeran", emoji: "💕" },
     { title: "All of Me", artist: "John Legend", emoji: "❤️" },
-    { title: "Thinking Out Loud", artist: "Ed Sheeran", emoji: "💝" },
+    { title: "No one like you", artist: "P-Square", emoji: "💝" },
     { title: "Make You Feel My Love", artist: "Adele", emoji: "🌹" },
+    { title: "Can't Help Falling in Love", artist: "Elvis Presley", emoji: "💘" },
+    { title: "Loving You", artist: "Minnie Riperton", emoji: "💞" },
   ];
 
   return (
@@ -70,7 +72,7 @@ const SpotifyPlaylist = () => {
             Our Love Playlist
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
-            Songs that remind me of us, every beat, every word
+            Songs that remind me of us, every beat, every word...
           </p>
         </motion.div>
 
@@ -116,7 +118,7 @@ const SpotifyPlaylist = () => {
                 className="mt-6 text-center"
               >
                 <a
-                  href="https://open.spotify.com/playlist/37i9dQZF1DX7KNKjOK0o75"
+                  href="https://open.spotify.com/playlist/1mD1oIburGsf6h68bix5fu?si=KngpmqC5TNq-pV6lVzoCHw&pi=g35zHxbcRQWsK"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#1DB954] text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:bg-[#1ed760] transition-all duration-300 text-sm sm:text-base touch-manipulation min-h-[44px]"
@@ -181,7 +183,7 @@ const SpotifyPlaylist = () => {
                 className="w-full mt-6 px-6 py-4 border-2 border-dashed border-rose-soft rounded-2xl text-rose-deep font-medium hover:bg-rose-soft/20 transition-all duration-300 flex items-center justify-center gap-2 touch-manipulation min-h-[44px]"
               >
                 <span className="text-2xl">+</span>
-                <span className="text-sm sm:text-base">Add Your Favorite Song</span>
+                {/* <span className="text-sm sm:text-base">Favorite Songs</span> */}
               </motion.button>
             </div>
           </motion.div>

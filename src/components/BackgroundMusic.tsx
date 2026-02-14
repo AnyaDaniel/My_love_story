@@ -1,23 +1,38 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, VolumeX, Play, Pause } from 'lucide-react';
+import { useMusicContext } from '@/contexts/MusicContext';
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(0.3);
   const [showControls, setShowControls] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const { backgroundMusicRef } = useMusicContext();
+  const audioRef = backgroundMusicRef || useRef<HTMLAudioElement>(null);
 
-  // Replace this URL with your actual background music file
-  // You can use a royalty-free romantic instrumental or upload your own
-  const musicUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+  // Playlist of background songs
+  const playlist = [
+    { title: "Lovin' You", url: "/music/lovin-you.mp3" },
+    { title: "Can't Help Falling in Love", url: "/music/cant-help-falling.mp3" }
+  ];
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
     }
   }, [volume]);
+
+  // Handle when a song ends - play next song
+  const handleSongEnd = () => {
+    if (audioRef.current) {
+      const nextIndex = (currentTrackIndex + 1) % playlist.length;
+      setCurrentTrackIndex(nextIndex);
+      audioRef.current.src = playlist[nextIndex].url;
+      audioRef.current.play();
+    }
+  };
 
   const togglePlay = () => {
     if (audioRef.current) {
@@ -50,9 +65,9 @@ const BackgroundMusic = () => {
       {/* Hidden audio element */}
       <audio
         ref={audioRef}
-        src={musicUrl}
-        loop
+        src={playlist[currentTrackIndex].url}
         preload="auto"
+        loop
       />
 
       {/* Floating Music Control Button */}
@@ -74,7 +89,7 @@ const BackgroundMusic = () => {
               className="absolute bottom-full right-0 mb-4 glass rounded-2xl p-4 shadow-xl min-w-[200px]"
             >
               <div className="text-center mb-3">
-                <p className="text-sm font-medium text-foreground mb-1">Background Music</p>
+                <p className="text-sm font-medium text-foreground mb-1">{playlist[currentTrackIndex].title}</p>
                 <p className="text-xs text-muted-foreground">
                   {isPlaying ? '♪ Playing ♪' : 'Paused'}
                 </p>
