@@ -171,11 +171,11 @@ const MemoryGallery = () => {
               </button>
 
               {/* Image */}
-              <div className="relative aspect-video">
+              <div className="relative w-full flex items-center justify-center bg-gradient-to-br from-rose-soft to-rose-blush">
                 <img
                   src={selectedMemory.image}
                   alt={selectedMemory.title}
-                  className="w-full h-full object-cover"
+                  className="w-full max-h-[60vh] object-contain"
                 />
               </div>
 
